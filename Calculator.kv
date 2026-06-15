@@ -1,0 +1,155 @@
+#:import utils kivy.utils
+
+# ==========================================
+# Global Widget Defaults
+# ==========================================
+<Button>:
+    size_hint: 1, 1
+    font_size: 32
+
+
+# ==========================================
+# Main Calculator Screen Layout
+# ==========================================
+<Calculator>:
+    orientation: "vertical"
+    size_hint: 1, 1
+    spacing: 5
+    padding: 5
+
+    # --------------------------------------
+    # Primary Input Screen (Formula Expression)
+    # --------------------------------------
+    TextInput:
+        id: input
+        text: "0"
+        multiline: False
+        size_hint_y: 0.16
+        font_size: 40
+        halign: "right"
+        input_filter: "int"
+        background_normal: ""
+        background_active: ""
+        background_color: (1, 1, 1, 1)
+
+    # --------------------------------------
+    # Secondary Display Screen (Calculated Result)
+    # --------------------------------------
+    TextInput:
+        id: input2
+        text: ""
+        hint_text: "Output"          # Capitalized consistency fix
+        multiline: False
+        readonly: True
+        size_hint_y: 0.16
+        font_size: 30
+        halign: "right"
+        background_normal: ""
+        background_active: ""
+        background_color: (1, 1, 1, 1)
+
+    # --------------------------------------
+    # Interactive Button Interface
+    # --------------------------------------
+    GridLayout:
+        cols: 4
+        rows: 5
+        size_hint: 1, 1
+        spacing: 5
+
+        # --- Row 1 ---
+        Button:
+            text: "%"
+            on_press: root.maths_sign("%")
+
+        Button:
+            text: "C"
+            on_press: root.clear_btn()
+
+        Button:
+            text: "<<"
+            on_press: root.last_remove()
+
+        Button:
+            text: "/"
+            on_press: root.maths_sign("/")
+
+        # --- Row 2 ---
+        Button:
+            text: "7"
+            background_color: utils.get_color_from_hex("#363636")
+            on_press: root.button_press(7)
+
+        Button:
+            text: "8"
+            background_color: utils.get_color_from_hex("#363636")
+            on_press: root.button_press(8)
+
+        Button:
+            text: "9"
+            background_color: utils.get_color_from_hex("#363636")
+            on_press: root.button_press(9)
+
+        Button:
+            text: "x"
+            on_press: root.maths_sign("*")
+
+        # --- Row 3 ---
+        Button:
+            text: "4"
+            background_color: utils.get_color_from_hex("#363636")
+            on_press: root.button_press(4)
+
+        Button:
+            text: "5"
+            background_color: utils.get_color_from_hex("#363636")
+            on_press: root.button_press(5)
+
+        Button:
+            text: "6"
+            background_color: utils.get_color_from_hex("#363636")
+            on_press: root.button_press(6)
+
+        Button:
+            text: "-"
+            on_press: root.maths_sign("-")
+
+        # --- Row 4 ---
+        Button:
+            text: "1"
+            background_color: utils.get_color_from_hex("#363636")
+            on_press: root.button_press(1)
+
+        Button:
+            text: "2"
+            background_color: utils.get_color_from_hex("#363636")
+            on_press: root.button_press(2)
+
+        Button:
+            text: "3"
+            background_color: utils.get_color_from_hex("#363636")
+            on_press: root.button_press(3)
+
+        Button:
+            text: "+"
+            on_press: root.maths_sign("+")
+
+        # --- Row 5 ---
+        Button:
+            text: "+/-"
+            background_color: utils.get_color_from_hex("#363636")
+            on_press: root.change_sign()
+
+        Button:
+            text: "0"
+            background_color: utils.get_color_from_hex("#363636")
+            on_press: root.button_press(0)
+
+        Button:
+            text: "."
+            background_color: utils.get_color_from_hex("#363636")
+            on_press: root.dot()
+
+        Button:
+            text: "="
+            on_press: root.button_equalto()
