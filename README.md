@@ -37,4 +37,4 @@ python main.py
 
 ## Screenshot
 
-![Calculator](screenshort/calculator.png)
+![Calculator](screenshorts/calculator.png)
