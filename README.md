@@ -1,5 +1,5 @@
-# Kivy Calculator
-
+# Kivy Calculator App
+### Downlone the test .apk file from tags there will be v1.0.0 
 **Author:** Priyanshu (*YiralcrafT*)
 
 ## Reason for Using Python and Kivy
