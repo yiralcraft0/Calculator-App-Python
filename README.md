@@ -1,6 +1,12 @@
 # Kivy Calculator App
-### -> Downlone the test .apk file from tags there will be v1.0.0 
 **Author:** Priyanshu (*YiralcrafT*)
+
+### Latest Stable Version
+👉 **[Download the Latest APK (v1.0.0)](https://github.com/yiralcraft0/Calculator-App-Python/releases/download/v1.0.0/Calculator.apk)**
+
+## Screenshot
+
+![Calculator](screenshorts/calculator.png)
 
 ## Reason for Using Python and Kivy
 
@@ -34,7 +40,3 @@ I have chosen to keep this project public because it showcases my progress as a 
 pip install -r requirements.txt
 python main.py
 ```
-
-## Screenshot
-
-![Calculator](screenshorts/calculator.png)
